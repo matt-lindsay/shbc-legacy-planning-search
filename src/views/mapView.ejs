@@ -1,0 +1,61 @@
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+<!--bower:css-->
+<link rel="stylesheet" href="/lib/leaflet/dist/leaflet.css" />
+<link rel="stylesheet" href="/lib/leaflet.markercluster/dist/MarkerCluster.css" />
+<link rel="stylesheet" href="/lib/leaflet.markercluster/dist/MarkerCluster.Default.css" />
+<link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css" />
+<!--endbower-->
+<!--inject:css-->
+<link rel="stylesheet" href="/css/styles.css">
+<link rel="stylesheet" href="/css/site.css">
+<link rel="stylesheet" href="/css/l.geosearch.css">
+<!--endinject-->
+
+<title>SHBC - Leagcy Planning Search</title>
+
+<!-- Nav view -->
+<% include ./partials/navView %>
+    
+<div id="wrapper" class="container-fluid">
+    <div id="main">
+        <!-- Start Main -->
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <h4>Map Search</h4>
+                <a href="/" class="btn btn-sm btn-default"><i class="fa fa-angle-left"></i> Back</a>
+                
+                <div>
+                    <label>Please enter an address within Surrey Heath</label>
+                </div>
+                <div id="remote" class="form-group">
+                    <input class="typeahead form-control" type="text" name="data" placeholder="Address search">
+                </div>
+
+                <div id="map"></div>
+                <!-- Planning Selector Placeholder -->
+            </div>
+        </div>
+        <!-- End Main -->
+    </div>
+    <!-- Footer view -->
+    <% include ./partials/footerView %>
+</div>
+<!-- bower:js -->
+<script src="/lib/jquery/dist/jquery.min.js"></script>
+<script src="/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/lib/leaflet/dist/leaflet.js"></script>
+<script src="/lib/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+<script src="/lib/typeahead.js/dist/typeahead.bundle.min.js"></script>
+<script src="/lib/typeahead.js/dist/typeahead.jquery.min.js"></script>
+<script src="/lib/typeahead.js/dist/bloodhound.min.js"></script>
+<!-- endbower -->
+<!--inject:js-->
+<script src="/js/bloodhound-remote.js"></script>
+<script src="/js/l.control.geosearch.js"></script>
+<script src="/js/l.geosearch.provider.google.js"></script>
+<script src="/js/markers.js"></script>
+<script src="/js/leaf-demo.js"></script>
+<!--endinject-->

@@ -1,0 +1,39 @@
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width" />
+   
+<!--bower:css-->
+<link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css" />
+<!--endbower-->
+<!-- bower:js -->
+<script src="/lib/jquery/dist/jquery.js"></script>
+<script src="/lib/bootstrap/dist/js/bootstrap.js"></script>
+<!-- endbower -->
+<!--inject:css-->
+<link rel="stylesheet" href="/css/styles.css">
+<link rel="stylesheet" href="/css/site.css">
+<!--endinject-->
+
+<title>SHBC - Leagcy Planning Search</title>
+
+<!-- Nav view -->
+<% include ./partials/navView %>
+    
+<div id="wrapper" class="container-fluid">
+    <div id="main">
+        <!-- Start Main -->
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <h4>Planning History Search</h4>
+                <a href="/" class="btn btn-sm btn-default"><i class="fa fa-angle-left"></i> Back</a>
+                <!-- Street Entry Field view -->
+                <% include ./partials/streetSearchView %>
+                <!-- History Record Card Results view -->
+                <% include ./partials/paginatedView %>
+            </div>
+        </div>
+        <!-- End Main -->
+    </div>
+    <!-- Footer view -->
+    <% include ./partials/footerView %>
+</div>
