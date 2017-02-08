@@ -17,13 +17,24 @@ var historyCardService = function () {
             response.on('data', function (chunk) {
                 str += chunk;
             });
+            
+            response.on('error', function (err) {
+                //console.log('>>> Error: ' + err);
+                str += err;
+            });
 
-            response.on('end', function () {
-                cb(null, str);
+            response.on('end', function (err) {
+                cb(err, str);
             });
         };
 
-        http.request(options, callback).end();
+        var request = http.request(options, callback);
+        
+        request.on('error', function (err) {
+            console.log('>>> Error: ' + err); 
+        });
+        
+        request.end();
     };
     return { getHistRecordCard: getHistRecordCard };
 };

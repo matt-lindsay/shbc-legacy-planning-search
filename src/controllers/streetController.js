@@ -18,8 +18,11 @@ var streetController = function (historyCardService, nav) {
             // History Record Card Service.
             historyCardService.getHistRecordCard(encodeURI(streetName), function (err, results) {
                 if (err) {
-                    throw err;
+                    //throw err;
+                    res.status(500).send(err);
                 }
+                
+                //if (JSON.parse(results) === )
                 
                 var parsedJSON = JSON.parse(results);
                 
@@ -43,9 +46,9 @@ var streetController = function (historyCardService, nav) {
                 // Show list of JSON from group.
                 JSONList = paginatedStreet[+currentPage - 1];
                 
-                JSONList.forEach(function (item) {
-                   console.log('>>> ' + item.address + ' ' + item.preview_url + ' ' + item.pageCount);
-                });
+                //JSONList.forEach(function (item) {
+                //   console.log('>>> ' + item.address + ' ' + item.preview_url + ' ' + item.pageCount);
+                //});
     
                 //console.log('>>> Request for History Record Cards at: ' + streetName);
                 //console.log('>>> Total # of records: ' + totalRecords);

@@ -19,7 +19,8 @@ var addressService = function () {
             });
             
             response.on('error', function (err) {
-                 console.log(err);
+                 //console.log(err);
+                 str += err;
             });
 
             response.on('end', function () {
@@ -27,7 +28,13 @@ var addressService = function () {
             });
         };
 
-        http.request(options, callback).end();
+        var request = http.request(options, callback);
+        
+        request.on('error', function (err) {
+            console.log('>>> Error: ' + err);
+        });
+        
+        request.end();
     };
     return { getAddress: getAddress };
 };

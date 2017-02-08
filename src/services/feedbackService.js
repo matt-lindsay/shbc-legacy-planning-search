@@ -18,9 +18,9 @@ var feedbackService = function () {
         
         var post_req = https.request(options, function (res) {
             res.setEncoding('utf8');
-            res.on('data', function (chunk) {
-                console.log('>>> Response: ' + chunk); 
-            });
+            //res.on('data', function (chunk) {
+            //    console.log('>>> Response: ' + chunk); 
+            //});
         });
         
         post_req.write(feedback);

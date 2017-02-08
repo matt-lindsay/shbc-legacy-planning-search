@@ -6,7 +6,6 @@
 
 #### To Do
 
-- Minify code files prior to deployment
 - Update Bloodhound URL for deployed app
 - Enter Pla Case # to return Box link, 
   1. submit to either get the document if redacted....
@@ -14,3 +13,7 @@
   3. How to store links to Planning History in Box?
     - MongoDb
     - JSON file
+
+#### Notes
+
+- leaf-demo.js would not minify due to ticks in wms attribution
