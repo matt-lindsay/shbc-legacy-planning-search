@@ -10,9 +10,11 @@ var nav = [
     { Link: '/Feedback', Text: 'Feedback'},
     { Link: '/About', Text: 'About' }
 ];
+var indexRouter = require('./src/routes/indexRoutes')(nav);
 var mapRouter = require('./src/routes/mapRoutes')(nav);
 var streetRouter = require('./src/routes/streetRoutes')(nav);
 var feedbackRouter = require('./src/routes/feedbackRoutes')(nav);
+var aboutRouter = require('./src/routes/aboutRoutes')(nav);
 var apiRouter = require('./src/routes/apiRoutes')();
 
 var yearDateFormat = 'YYYY';
@@ -24,27 +26,15 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.set('views', './src/views');
 app.set('view engine', 'ejs');
 
+app.use('/', indexRouter);
 app.use('/Map', mapRouter);
 app.use('/Street', streetRouter);
 app.use('/Feedback', feedbackRouter);
+app.use('/About', aboutRouter);
 app.use('/Api', apiRouter);
 
 app.locals.moment = moment;
 app.locals.yearDateFormat = yearDateFormat;
-
-app.get('/', function (req, res) {
-    res.render('index', {
-        title: 'SHBC - node app',
-        nav: nav
-    });
-});
-
-app.get('/About', function (req, res) {
-    res.render('aboutView', {
-        title: 'SHBC - node app',
-        nav: nav
-    });
-});
 
 app.listen(port, function (err) {
     if (err) {

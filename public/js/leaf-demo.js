@@ -15,13 +15,13 @@
     
     // Plotting sheets layer.
     var wms = L.tileLayer.wms('https://maps.surreyheath.gov.uk/WMS/wms.exe?', {
-        attribution: `&copy; Crown copyright. All rights reserved. Surrey Heath Borough Council 100018679 ${copyrightYear}`,
+        attribution: '&copy; Crown copyright. All rights reserved. Surrey Heath Borough Council 100018679 ' + copyrightYear,
         layers: 'planningplottingsheetsWGS84'
     });
     
     // 2013 Aerial Survey.
     var airSurvey = L.tileLayer.wms('https://maps.surreyheath.gov.uk/WMS/wms.exe?', {
-        attribution: `&copy;Surrey Heath Borough Council ${copyrightYear}`,
+        attribution: '&copy;Surrey Heath Borough Council ' + copyrightYear,
         layers: '_2013AirSurvey_WGS84',
         format: 'image/png',
         transparent: false

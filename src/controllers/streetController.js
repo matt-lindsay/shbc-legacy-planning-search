@@ -18,11 +18,8 @@ var streetController = function (historyCardService, nav) {
             // History Record Card Service.
             historyCardService.getHistRecordCard(encodeURI(streetName), function (err, results) {
                 if (err) {
-                    //throw err;
                     res.status(500).send(err);
                 }
-                
-                //if (JSON.parse(results) === )
                 
                 var parsedJSON = JSON.parse(results);
                 
