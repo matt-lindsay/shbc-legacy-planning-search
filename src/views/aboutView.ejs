@@ -1,0 +1,32 @@
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width" />
+
+<!--bower:css-->
+<link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css" />
+<!--endbower-->
+<!-- bower:js -->
+<script src="/lib/jquery/dist/jquery.js"></script>
+<script src="/lib/bootstrap/dist/js/bootstrap.js"></script>
+<!-- endbower -->
+<!--inject:css-->
+<link rel="stylesheet" href="/lib/_app/styles.css">
+<link rel="stylesheet" href="/lib/_app/site.css">
+<!--endinject-->
+
+<title>SHBC - Leagcy Planning Search</title>
+
+<!-- Nav view -->
+<% include ./partials/navView %>
+<div id="wrapper" class="container-fluid">
+    <div id="main" class="container-fluid">
+        <!-- Start Main -->
+        <div class="row">
+            <!-- Service Explanation view -->
+            <% include ./partials/explanationView %>
+        </div>
+        <!-- End Main -->
+    </div>
+    <!-- Footer view -->
+    <% include ./partials/footerView %>
+</div>

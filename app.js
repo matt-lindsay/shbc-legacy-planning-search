@@ -7,7 +7,8 @@ var port = process.env.PORT || 5000;
 var nav = [
     { Link: '/Map', Text: 'Map' },
     { Link: '/Street', Text: 'Street' },
-    { Link: '/Feedback', Text: 'Feedback'}
+    { Link: '/Feedback', Text: 'Feedback'},
+    { Link: '/About', Text: 'About' }
 ];
 var mapRouter = require('./src/routes/mapRoutes')(nav);
 var streetRouter = require('./src/routes/streetRoutes')(nav);
@@ -33,6 +34,13 @@ app.locals.yearDateFormat = yearDateFormat;
 
 app.get('/', function (req, res) {
     res.render('index', {
+        title: 'SHBC - node app',
+        nav: nav
+    });
+});
+
+app.get('/About', function (req, res) {
+    res.render('aboutView', {
         title: 'SHBC - node app',
         nav: nav
     });

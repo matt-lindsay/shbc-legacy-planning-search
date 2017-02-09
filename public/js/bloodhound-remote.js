@@ -4,9 +4,9 @@ var addresses = new Bloodhound({
     queryTokenizer: Bloodhound.tokenizers.whitespace,
     prefetch: './js/address.json',
     remote: {
-        url: 'http://shbc-legacy-planning-search-mattlindsay.c9users.io/Api/AddressSearch?search=%QUERY',
+        url: './Api/AddressSearch?search=%QUERY',
         wildcard: '%QUERY'
-    }
+    }//http://shbc-legacy-planning-search-mattlindsay.c9users.io
 });
 
 $('#remote .typeahead').typeahead(null, {
