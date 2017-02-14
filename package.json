@@ -30,5 +30,13 @@
     "jshint-stylish": "^2.2.1",
     "pump": "^1.0.2",
     "wiredep": "^4.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matt-lindsay/shbc-legacy-planning-search.git"
+  },
+  "bugs": {
+    "url": "https://github.com/matt-lindsay/shbc-legacy-planning-search/issues"
+  },
+  "homepage": "https://github.com/matt-lindsay/shbc-legacy-planning-search#readme"
 }
