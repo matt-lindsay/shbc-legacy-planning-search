@@ -5,7 +5,12 @@ launch.json
 
 # Project Dependencies
 node_modules/
-public/lib/
+public/lib/bootstrap
+public/lib/font-awesome
+public/lib/jquery
+public/lib/leaflet
+public/lib/leaflet.markercluster
+public/lib/typeahead.js
 
 # Tools
 .jscsrc
