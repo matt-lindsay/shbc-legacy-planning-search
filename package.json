@@ -4,7 +4,8 @@
   "description": "Web interface for searching legacy Planning documentation stored in Box.",
   "main": "app.js",
   "scripts": {
-    "prestart": "npm install && bower install",
+    "postinstall": "bower install",
+    "prestart": "npm install",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js"
   },

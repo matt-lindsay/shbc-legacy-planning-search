@@ -1,24 +1,24 @@
 # Use nodejs LTS source
-FROM node:boron
+FROM node:argon
 
 # Add envrionment variables
-ENV container_path /path/to/app
 ENV addressPath ****
 ENV fmeApi ****
 ENV fmePath ****
 ENV historyCardPath ****
 ENV shApi ****
+ENV PORT ****
 
 # Create app directory
-#RUN mkdir -p container_path
-WORKDIR container_path
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
 
 # Install app dependencies
-#COPY package.json container_path + '/'
-RUN npm install
+COPY package.json /usr/src/app/
+COPY bower.json /usr/src/app/
 
 # Bundle app source
-COPY . container_path
+COPY . /usr/src/app
 
-EXPOSE 8080
+EXPOSE PORT
 CMD ["npm", "start" ]

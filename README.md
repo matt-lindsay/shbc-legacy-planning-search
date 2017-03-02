@@ -6,8 +6,10 @@
 
 #### To Do
 
-- Dockerize the app
 - Address / History Card APIs need to be unlimited
+- Document code base
+- Document app usage
+- Document environment variables
 - Enter Pla Case # to return Box link, 
   1. submit to either get the document if redacted....
   2. ...or send the document for redaction.
