@@ -20,5 +20,5 @@ COPY bower.json /usr/src/app/
 # Bundle app source
 COPY . /usr/src/app
 
-EXPOSE PORT
+EXPOSE {number}
 CMD ["npm", "start" ]
