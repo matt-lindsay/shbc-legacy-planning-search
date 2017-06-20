@@ -6,6 +6,7 @@
 
 #### To Do
 
+- Add CI/CD on Git repository
 - Address / History Card APIs need to be unlimited (Debian end).
 - Document code base
 - Document app usage
