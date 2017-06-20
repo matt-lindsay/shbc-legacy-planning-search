@@ -2,6 +2,7 @@
 
 ## Surrey Heath Borough Council
 
+[![Codefresh build status]( https://g.codefresh.io/api/badges/build?repoOwner=matt-lindsay&repoName=shbc-legacy-planning-search&branch=master&pipelineName=shbc-legacy-planning-search&accountName=matt-lindsay&type=cf-1)]( https://g.codefresh.io/repositories/matt-lindsay/shbc-legacy-planning-search/builds?filter=trigger:build;branch:master;service:59493b8304fb1c0001591fc9~shbc-legacy-planning-search)
 
 
 #### To Do
