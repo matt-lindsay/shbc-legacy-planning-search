@@ -6,7 +6,7 @@
 
 #### To Do
 
-- Address / History Card APIs need to be unlimited
+- Address / History Card APIs need to be unlimited (Debian end).
 - Document code base
 - Document app usage
 - Document environment variables
