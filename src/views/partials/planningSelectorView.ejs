@@ -1,14 +1,11 @@
 <div id="planningSelector">
-    <form method="post">
-        <!-- Case Number Entry Field -->
+    <form name="planningCaseSelectorForm" action="/Map/planningCase" method="get">
         <div class="form-group">
-            <label for="selector">Please enter a Planning Application number</label>
-            <input type="text" id="address" class="form-control" />
+            <label for="planningCase">Please enter a Planning application number</label>
+            <input type="text" id="planningCase" class="form-control" />
         </div>
-        <!-- Submit / Cancel Buttons -->
         <div class="form-group">
-            <a href="\Map" class="btn btn-default">Cancel</a>
-            <input type="submit" id="selectorSubmit" value="Submit" class="btn btn-success" />
+            <input type="submit" value="Search" />
         </div>
     </form>
 </div>

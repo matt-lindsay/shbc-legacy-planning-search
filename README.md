@@ -7,12 +7,11 @@
 
 #### To Do
 
-- Add CI/CD on Git repository
 - Address / History Card APIs need to be unlimited (Debian end).
-- Document code base
-- Document app usage
-- Document environment variables
-- Enter Pla Case # to return Box link, 
+- Documentation code base
+- Documentation app usage
+- Documentation environment variables
+- Front end Enter Pla Case # to return Box link, 
   1. submit to either get the document if redacted....
   2. ...or send the document for redaction.
   3. How to store links to Planning History in Box?
