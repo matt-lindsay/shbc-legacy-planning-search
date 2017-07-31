@@ -1,4 +1,5 @@
 var mapController = function (nav) {
+    
     var getMap = function (req, res) {
         res.render('mapView', {
             title: 'Map',
@@ -7,7 +8,10 @@ var mapController = function (nav) {
     };
     
     var getCaseFile = function (req, res) {
-        alert('Route reached.');
+        var data = req.query.planningCase;
+        
+        console.log('Route reached: ' + data);
+        res.status(201).redirect('/Map');
     };
     
     return {

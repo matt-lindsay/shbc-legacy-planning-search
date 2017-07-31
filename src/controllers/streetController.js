@@ -1,6 +1,6 @@
 var streetController = function (historyCardService, nav) {
+    
     var getStreet = function (req, res) {
-
         res.render('streetView', {
             title: 'Street',
             nav: nav,
