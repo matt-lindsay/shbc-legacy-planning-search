@@ -38,7 +38,8 @@ app.locals.yearDateFormat = yearDateFormat;
 
 app.listen(port, function (err) {
     if (err) {
-        throw err;
+        //throw err;
+        console.log('>>> Application Error: ' + err);
     }
     console.log('Running server on port ' + port);
 });
