@@ -2,7 +2,10 @@
 FROM node:argon
 
 # Add envrionment variables
+ENV ACCESSTOKEN ****
 ENV addressPath ****
+ENV CLIENTID ****
+ENV CLIENTSECRET ****
 ENV fmeApi ****
 ENV fmePath ****
 ENV historyCardPath ****
