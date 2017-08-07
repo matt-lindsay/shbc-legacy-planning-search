@@ -3,9 +3,14 @@ const box = require('../../box');
 var mapController = function (nav) {
     
     var getMap = function (req, res) {
+        var shareLinkUrl = null;
+        var plaCase = null;
+        
         res.render('mapView', {
             title: 'Map',
-            nav: nav
+            nav: nav,
+            planningCase: plaCase,
+            linkUrl: shareLinkUrl
         });
     };
     
@@ -28,7 +33,14 @@ var mapController = function (nav) {
             // If the recordCount is 0 then no match is present within Box.
             if (recordCount === 0) {
                 console.log('>>> That Planning Case does not exist: ' + plaCase);
+                
                 // Serve back a message to the customer
+                res.render('mapView', {
+                    title: 'Map',
+                    nav: nav,
+                    planningCase: plaCase,
+                    linkUrl: null
+                });
             } else {
                 var folderName = response.entries[0].name;
                 var caseFolderId = response.entries[0].id;
@@ -50,7 +62,7 @@ var mapController = function (nav) {
                     });
                     
                     if (publishedFolderId) {
-                        console.log('>>> Ready to serve ' + publishedFolderId);
+                        console.log('>>> Ready to serve folder ' + publishedFolderId);
                         
                         client.folders.getItems(publishedFolderId, {fields: 'name'}, function (err, response) {
                             if (err) console.log('>>> Error \n' + err);
@@ -73,14 +85,40 @@ var mapController = function (nav) {
                                     
                                     var shared_link = response.shared_link;
                                     
-                                    console.log(response);
+                                    //console.log(response);
                                     
                                     // Test for a share link.
                                     if (shared_link === null) {
                                         console.log('>>> No shared link.');
                                         // Create a shared link.
+                                        client.files.update(documentId, {shared_link: client.accessLevels.OPEN}, function (err, response) {
+                                            if (err) console.log('>>> Error \n' + err);
+                                            
+                                            console.log('>>> Create Shared Link Response:');
+                                            console.log(response.shared_link);
+                                            
+                                            // Serve the document to the customer...
+                                            res.render('mapView', {
+                                                title: 'Map',
+                                                nav: nav,
+                                                planningCase: plaCase,
+                                                linkUrl: response.shared_link.url
+                                            });
+                                            
+                                        });
                                     } else {
-                                        console.log('>>> Shared Link: ' + shared_link);
+                                        var shareLinkUrl = shared_link.url;
+                                        
+                                        console.log('>>> Shared Link Exists:');
+                                        console.log(shareLinkUrl);
+                                        
+                                        // Serve the document to the customer...
+                                        res.render('mapView', {
+                                            title: 'Map',
+                                            nav: nav,
+                                            planningCase: plaCase,
+                                            linkUrl: shareLinkUrl
+                                        });
                                     }
                                 });
                             } else if (numOfDocs === 0) {
@@ -95,7 +133,7 @@ var mapController = function (nav) {
                 // If one does not exist send a request to redaction agent.
                 // If it does not exist inform the customer.
             
-                res.status(201).redirect('/Map');
+                //res.status(201).redirect('/Map');
             }
         });
     };

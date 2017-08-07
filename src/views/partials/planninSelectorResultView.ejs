@@ -1,0 +1,9 @@
+<div id="planningSelectorResult">
+    <% if (planningCase) { %>
+        <% if (linkUrl) { %>
+            <a href="<%= linkUrl %>" target="_blank">Document link for <%= planningCase %></a>
+        <% } else { %>
+            <!-- Case number doesn't exist. -->
+        <% } %>
+    <% } %>
+</div>
