@@ -2,8 +2,9 @@
     <% if (planningCase) { %>
         <% if (linkUrl) { %>
             <a href="<%= linkUrl %>" target="_blank">Document link for <%= planningCase %></a>
-        <% } else { %>
+        <% } else if (linkUrl === null) { %>
             <!-- Case number doesn't exist. -->
+            <p>That Planning Case number is not recognised <%= planningCase %></p>
         <% } %>
     <% } %>
 </div>

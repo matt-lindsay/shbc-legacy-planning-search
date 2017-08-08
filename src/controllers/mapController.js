@@ -72,20 +72,40 @@ var mapController = function (nav) {
                             var documentId;
                             
                             if (numOfDocs > 1) {
+                                // TODO fix this.
+                                var multipleDocs;
                                 response.entries.forEach(function (item) {
                                     documentId.push(item.id);
                                 });
                                 // Loop each item and get their IDs.
+                                documentId.forEach(function (item) {
+                                    client.files.get(item, null, function (err, reponse) {
+                                        if (err) console.log('>>> Error \n' + err);
+                                        var shared_link = response.shared_link;
+                                        
+                                        if (shared_link === null) {
+                                            client.files.update(item, {shared_link: client.accessLevels.OPEN}, function (err, response) {
+                                                if (err) console.log('>>> Error \n' + err);
+                                                multipleDocs.push(response.shared_link);
+                                            });
+                                        }
+                                    });
+                                });
+                                
+                                // Serve the documents to the customer...
+                                res.render('mapView', {
+                                    title: 'Map',
+                                    nav: nav,
+                                    planningCase: plaCase,
+                                    linkUrl: multipleDocs
+                                });
                             } else if (numOfDocs === 1) {
                                 documentId = response.entries[0].id;
                                 console.log('>>> Document Id ' + documentId);
                                 
                                 client.files.get(documentId, null, function(err, response) {
                                     if (err) console.log('>>> Error \n' + err);
-                                    
                                     var shared_link = response.shared_link;
-                                    
-                                    //console.log(response);
                                     
                                     // Test for a share link.
                                     if (shared_link === null) {
