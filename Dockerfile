@@ -13,15 +13,18 @@ ENV shApi ****
 ENV PORT ****
 
 # Create app directory
-RUN mkdir -p /usr/src/app
+#RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
+
+RUN npm install --only=production
 
 # Install app dependencies
 COPY package.json /usr/src/app/
 COPY bower.json /usr/src/app/
 
 # Bundle app source
-COPY . /usr/src/app
+#COPY . /usr/src/app
+COPY . .
 
 EXPOSE 8080
 CMD ["npm", "start" ]
