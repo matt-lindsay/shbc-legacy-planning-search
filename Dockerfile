@@ -1,5 +1,5 @@
 # Use nodejs LTS source
-FROM node:argon
+FROM node:boron
 
 # Add envrionment variables
 ENV ACCESSTOKEN ****
