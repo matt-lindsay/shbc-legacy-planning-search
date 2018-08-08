@@ -1,4 +1,4 @@
-const box = require('../../box');
+const Box = require('../../box');
 
 var mapController = function (nav) {
     
@@ -18,10 +18,10 @@ var mapController = function (nav) {
         var plaCase = req.query.planningCase;
         
         // Instantiate a new Box client.
-        var client = new box();
+        var client = new Box();
         
         // Query Box for this Planning case.
-        client.search.query(plaCase, {ancestor_folder_id: 8987026758, type: 'folder'}, function (err, response) {
+        client.search.query(plaCase, {ancestor_folder_ids: 8987026758, type: 'folder'}, function (err, response) {
             // Log error e.g. not authorised, doesn't exist or something else.
             if (err) { // TODO handle errors.
                 console.log('>>> Error \n' + err);
@@ -147,12 +147,13 @@ var mapController = function (nav) {
                         });
                     } else {
                         console.log('>>> Redaction required.');
+                        // Redirect customer to details submission page.
+                            // record customer's details to database.
+                        // Obtain shared link for original copy > 
+                            // send to API >
+                            // send to redaction agent.
                     }
                 });
-                
-                // If one does not exist send a request to redaction agent.
-                // If it does not exist inform the customer.
-            
                 //res.status(201).redirect('/Map');
             }
         });

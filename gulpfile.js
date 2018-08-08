@@ -59,6 +59,6 @@ gulp.task('serve', ['style'], function () {
     };
     return nodemon(options)
         .on('restart', function (ev) {
-            console.log('Restarting....');
+            console.log('Restarting.... ' + ev);
         });
 });
