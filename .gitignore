@@ -15,3 +15,4 @@ public/lib/typeahead.js
 # Tools
 .jscsrc
 .jshintrc
+.env

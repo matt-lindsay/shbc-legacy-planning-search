@@ -1435,7 +1435,7 @@ group-array@^0.3.0:
     split-string "^1.0.1"
     union-value "^0.2.3"
 
-gulp-clean-css@^3.0.0:
+gulp-clean-css@^3.10.0:
   version "3.10.0"
   resolved "https://registry.yarnpkg.com/gulp-clean-css/-/gulp-clean-css-3.10.0.tgz#bccd4605eff104bfa4980014cc4b3c24c571736d"
   dependencies:

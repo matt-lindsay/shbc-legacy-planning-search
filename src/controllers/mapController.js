@@ -1,4 +1,4 @@
-const Box = require('../../box');
+var Box = require('../../box');
 
 var mapController = function (nav) {
     
