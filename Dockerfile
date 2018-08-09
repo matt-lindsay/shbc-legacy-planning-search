@@ -20,7 +20,7 @@ WORKDIR /usr/src/app
 #RUN npm install --only=production
 
 # Install app dependencies
-COPY package.json /usr/src/app/
+COPY package*.json /usr/src/app/
 #COPY bower.json /usr/src/app/
 
 # Bundle app source
