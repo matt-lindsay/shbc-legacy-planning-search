@@ -16,3 +16,4 @@ public/lib/typeahead.js
 .jscsrc
 .jshintrc
 .env
+package-lock.json
