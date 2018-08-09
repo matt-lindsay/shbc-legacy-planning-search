@@ -16,6 +16,7 @@ ENV PORT ****
 #RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
+#RUN npm install
 #RUN npm install --only=production
 
 # Install app dependencies
