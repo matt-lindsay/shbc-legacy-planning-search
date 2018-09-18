@@ -4,6 +4,7 @@ require('dotenv').config();
 var express = require('express');
 var bodyParser = require('body-parser');
 var moment = require('moment');
+const path = require('path');
 var app = express();
 var port = process.env.PORT || 5000;
 
@@ -23,6 +24,12 @@ var apiRouter = require('./src/routes/apiRoutes')();
 var yearDateFormat = 'YYYY';
 
 app.use(express.static('public'));
+app.use('/css', express.static(path.join(__dirname, '/node_modules/leaflet/dist')));
+app.use('/js', express.static(path.join(__dirname, '/node_modules/leaflet/dist')));
+app.use('/css', express.static(path.join(__dirname, '/node_modules/leaflet.markercluster/dist')));
+app.use('/js', express.static(path.join(__dirname, '/node_modules/leaflet.markercluster/dist')));
+app.use('/js', express.static(path.join(__dirname, '/node_modules/typeahead.js/dist')));
+app.use('/js', express.static(path.join(__dirname, '/node_modules/jquery/dist')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
