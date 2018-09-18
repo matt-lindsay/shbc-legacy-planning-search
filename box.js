@@ -1,3 +1,5 @@
+'use strict';
+
 var BoxSDK = require('box-node-sdk');
 
 var boxClient = function () {

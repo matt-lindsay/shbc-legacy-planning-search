@@ -1,3 +1,5 @@
+'use strict';
+
 var streetController = function (historyCardService, nav) {
     
     var getStreet = function (req, res) {

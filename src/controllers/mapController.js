@@ -1,3 +1,5 @@
+'use strict';
+
 var Box = require('../../box');
 
 var mapController = function (nav) {

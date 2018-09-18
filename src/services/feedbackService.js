@@ -1,3 +1,5 @@
+'use strict';
+
 var https = require('https');
 
 var feedbackService = function () {

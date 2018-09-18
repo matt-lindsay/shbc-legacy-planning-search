@@ -1,3 +1,5 @@
+'use strict';
+
 var feedbackController = function (feedbackService, nav) {
     var getFeedback = function (req, res) {
         res.render('feedbackView', {

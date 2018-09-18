@@ -1,3 +1,5 @@
+'use strict';
+
 var apiController = function (addressService) {
     var getAddress = function (req, res) {
         var  searchString = req.query.search;
