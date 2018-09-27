@@ -28,7 +28,6 @@
     "typeahead.js": "^0.11.1"
   },
   "devDependencies": {
-    "copy-webpack-plugin": "4.5.2",
     "ejs-lint": "^0.2.0",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^3.10.0",
@@ -41,8 +40,6 @@
     "jshint": "^2.9.4",
     "jshint-stylish": "^2.2.1",
     "pump": "^1.0.2",
-    "webpack": "4.17.1",
-    "webpack-cli": "3.1.0",
     "wiredep": "^4.0.0"
   },
   "repository": "git+https://github.com/matt-lindsay/shbc-legacy-planning-search.git",
