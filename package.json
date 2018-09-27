@@ -6,7 +6,6 @@
   "scripts": {
     "webpack": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prestart": "npm install",
     "start": "node app.js"
   },
   "author": "matt-lindsay",
