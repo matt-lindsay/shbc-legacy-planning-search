@@ -1,6 +1,6 @@
 'use strict';
 
-const Slack = require('../services/slack');
+// const Slack = require('../services/slack');
 
 var feedbackController = function (feedbackService, nav) {
     var getFeedback = function (req, res) {
@@ -13,8 +13,8 @@ var feedbackController = function (feedbackService, nav) {
     var postFeedback = function (req, res) {
         var feedback = JSON.stringify(req.body);
 
-        let slack = new Slack();
-        slack.notify('Legacy Planning Search', 'green', `${(feedback)}`);
+        // let slack = new Slack();
+        // slack.notify('Legacy Planning Search', 'green', feedback.comment + ' ' + feedback.email);
 
         feedbackService.postFeedback(feedback);
         res.status(201).redirect('/');
