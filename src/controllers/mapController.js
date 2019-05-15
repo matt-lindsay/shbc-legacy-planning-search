@@ -19,11 +19,12 @@ var mapController = function (nav) {
     var getCaseFile = function (req, res) {
         var plaCase = req.query.planningCase;
         
+        res.status(200).redirect('/Map');
         // Instantiate a new Box client.
-        var client = new Box();
+        // var client = new Box();
         
         // Query Box for this Planning case.
-        client.search.query(plaCase, {ancestor_folder_ids: 8987026758, type: 'folder'}, function (err, response) {
+        /*client.search.query(plaCase, {ancestor_folder_ids: 8987026758, type: 'folder'}, function (err, response) {
             // Log error e.g. not authorised, doesn't exist or something else.
             if (err) { // TODO handle errors.
                 console.log('>>> Error \n' + err);
@@ -158,7 +159,7 @@ var mapController = function (nav) {
                 });
                 //res.status(201).redirect('/Map');
             }
-        });
+        });*/
     };
     
     return {
