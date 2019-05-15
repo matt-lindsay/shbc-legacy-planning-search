@@ -2,7 +2,7 @@
 
 ## Surrey Heath Borough Council
 
-[![Codefresh build status]( https://g.codefresh.io/api/badges/build?repoOwner=matt-lindsay&repoName=shbc-legacy-planning-search&branch=master&pipelineName=shbc-legacy-planning-search&accountName=matt-lindsay&type=cf-1)]( https://g.codefresh.io/repositories/matt-lindsay/shbc-legacy-planning-search/builds?filter=trigger:build;branch:master;service:59493b8304fb1c0001591fc9~shbc-legacy-planning-search)
+[![Codefresh build status]( https://g.codefresh.io/api/badges/pipeline/matt-lindsay/matt-lindsay%2Fshbc-legacy-planning-search%2Fshbc-legacy-planning-search?branch=master&key=eyJhbGciOiJIUzI1NiJ9.NTkyMmNhNmE4Mjk3MDcwMDAxN2VmMGJk.69DGdPuj7zi_3MUuJJY0Vnhh_tlbOgeQ3S4licUFc7M&type=cf-1)]( https://g.codefresh.io/pipelines/shbc-legacy-planning-search/builds?repoOwner=matt-lindsay&repoName=shbc-legacy-planning-search&serviceName=matt-lindsay%2Fshbc-legacy-planning-search&filter=trigger:build~Build;branch:master;pipeline:59493b8304fb1c0001591fc9~shbc-legacy-planning-search)
 
 node version 6.11.2
 
